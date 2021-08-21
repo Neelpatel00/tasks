@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const Task = require('./models/tasks');
 
 const app = express();
+const PORT = process.env.PORT || 8000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 const dburi = "mongodb+srv://neel:neel007@node.tflje.mongodb.net/node?retryWrites=true&w=majority";
@@ -133,4 +134,4 @@ app.post('/all/edit/:id',(req, res) => {
  });
 
 
-app.listen(8000);
+app.listen(PORT);
