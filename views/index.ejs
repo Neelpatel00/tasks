@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+
+    <div class="part">   
+        <h2>All Tasks</h2>   
+        
+      <div class="part"> <h2> Not Completed Tasks </h2>
+      <% tasks.forEach(task => { %>
+        <% if (task.completed == false) { %>
+          
+            <div class="block"> <a href='/all/<%= task._id %>' > <div> <h3> Title :  <%= task.title %>  </h3>
+              <p> Discription : <%= task.discription %>  </p>
+              <p style="display: none;"> <%= task._id %>  </p>
+              <p> Task Completed : No  </p></div></a>
+              <div class="iner">
+              <a href='/all/edit/<%= task._id %>' >Edit</a>
+             <a class="delete" style="display: none;"  data-doc="<%= task._id %>">Delete</a></div>
+          </div>
+       
+        <% } %> 
+     <% }); %> 
+    </div>
+
+    <div class="part"> <h2> Completed Tasks </h2>
+      <% tasks.forEach(task => { %>
+        <% if (task.completed == true) { %>
+          
+            <div class="block">   <a href='/all/<%= task._id %>' ><div> <h3> Title :  <%= task.title %>  </h3>
+              <p> Discription : <%= task.discription %>  </p>
+              <p style="display: none;"> <%= task._id %>  </p>
+              <p> Task Completed : Yes  </p></div></a>
+              <div class="iner">
+              <a href='/all/edit/<%= task._id %>' >Edit</a>
+             <a class="delete" style="display: none;"   data-doc="<%= task._id %>">Delete</a></div>
+          </div>
+       
+        <% } %> 
+     <% }); %> 
+    </div>
+
+
+    </div>
+   <script>
+
+    const trash = document.querySelector('a.delete');
+
+    trash.addEventListener('click', (e) =>{
+      const endpoint = `/all/delete/`+`${trash.dataset.doc}`;
+      console.log(endpoint);
+      fetch(endpoint, {
+        method: 'DELETE'
+      })
+        .then( (response) => response.json())
+        //.then((data) => console.log(data))
+        .then( (data) => window.location.href = data.redirect)
+        .catch( (err) => console.log(err));
+    });
+    
+   </script>
+</body>
+</html>

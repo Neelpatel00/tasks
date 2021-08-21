@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Secular+One&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    background-image:url("./img/n2.jpeg");
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.head{
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.head h1{
+    font-family: 'Secular One', sans-serif;
+    padding: 15px;
+    color: #fff;
+    font-size: 3rem;
+}
+.nav{
+    padding: 10px;
+}
+.nav a{
+    color: #FEF9E7;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Cute Font', cursive;
+    font-size: 2rem;
+}
+.nav  :hover{
+    font-size: 3rem;
+    background-color: #3498DB ;
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+}
+.part{
+    background: rgba(0, 0, 0, 0.3);
+    margin: 15px;
+    border-radius: 10px;
+    
+}
+.part h2{
+    font-size: 3.5rem;
+    color: #ECF0F1;
+    text-align: center;
+}
+
+.part h3{
+    font-size: 2.5rem;
+    color: #82E0AA ;
+}
+.part p{
+    font-size: 2rem;
+    color: #D6EAF8 ;
+}
+.block{
+    background: rgba(0, 0, 0, 0.7);
+    margin: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.iner{
+    align-items: center;
+    display: flex;
+}
+.iner a{
+    padding: 25px;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #D6EAF8;
+    font-family: 'Cute Font', cursive;
+}
+
+.iner :hover{
+    font-size: 3rem;
+    background-color: #3498DB ;
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+
+.new{
+    background: rgba(0, 0, 0, 0.7);
+    margin: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.inp{
+        border-radius: 20px;
+        width: 90%;
+        padding: 10px;
+        margin: 10px;
+        font-size: 2rem;
+        text-decoration: none;
+        color: #3e8e41;
+
+}
+input[type=radio] {
+    border: 0px;
+    height: 2em;
+    width: 80px;
+   
+}
+.new h2{
+    
+        font-size: 3.5rem;
+        color: #ECF0F1;
+        text-align: center;
+}
+.new{
+    font-size: 2rem;
+    color: #D6EAF8;
+    
+    padding: 20px;
+    margin: 10px;
+}
+.button {
+    position: relative;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .delete{
+      cursor: pointer;
+      
+  }
+
+  @media(max-width:800px){
+      *{
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+      }
+      .head h1{
+        padding: 5px;
+        color: #fff;
+        font-size: 1rem;
+    }
+    .nav{
+        padding: 5px;
+    }
+    .nav a{
+        padding: 5px;
+        font-size: 1.5rem;
+    }
+    .nav  :hover{
+        font-size: 2rem;
+        border-radius: 10px;
+        padding: 4px;
+    }
+    .part{
+        margin: 8px;
+        border-radius: 10px;
+        
+    }
+    .part h2{
+        font-size: 1.8rem;
+    }
+    
+    .part h3{
+        font-size: 1.5rem;
+       
+    }
+    .part p{
+        font-size: 1rem;
+        
+    }
+    .block{
+       
+        margin: 8px;
+        margin-top: 5px;
+        border-radius: 10px;
+        padding: 10px;
+        
+        
+    }
+    .iner a{
+        padding: 10px;
+        font-size: 2rem;
+    }
+    
+    .iner :hover{
+        font-size: 2rem;
+    }
+    
+    
+    .new{
+        margin: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    .inp{
+            border-radius: 20px;
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #3e8e41;
+    
+    }
+    input[type=radio] {
+        border: 0px;
+        height: 1em;
+        width: 50px;
+       
+    }
+    .new h2{
+        font-size: 2rem;
+    }
+    .new{
+        font-size: 1rem;
+        color: #D6EAF8;
+        
+        padding: 30px;
+        margin: 10px;
+    }
+    .button {
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        margin-top: 10px;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .delete{
+          cursor: pointer;
+          
+      }
+    
+    
+}

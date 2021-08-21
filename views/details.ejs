@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+
+    <div class="part">   
+    <h2>Details Task</h2>   
+
+    <div class="block">
+        <div>
+            <h3> Title :  <%= tasks.title %>  </h3>
+              <p> Discription : <%= tasks.discription %>  </p>
+              <p style="display: none;"> <%= tasks._id %>  </p>
+              <% if (tasks.completed == true){ %> 
+              <p> Task Completed : Yes  </p>
+              <% } else { %>
+                <p> Task Completed : No  </p>
+                <% } %> 
+        </div>
+        <div class="iner">
+            <a href='/all/edit/<%= tasks._id %>' >edit</a>
+           <a class="delete"   data-doc="<%= tasks._id %>">delete</a></div>
+        </div>
+    </div>
+
+    <script>
+
+        const trash = document.querySelector('a.delete');
+    
+        trash.addEventListener('click', (e) =>{
+          const endpoint = `/all/delete/`+`${trash.dataset.doc}`;
+          console.log(endpoint);
+          fetch(endpoint, {
+            method: 'DELETE'
+          })
+            .then( (response) => response.json())
+            //.then((data) => console.log(data))
+            .then( (data) => window.location.href = data.redirect)
+            .catch( (err) => console.log(err));
+        });
+        
+       </script>
